@@ -5,28 +5,18 @@ package trees;
  */
 public class BST {
 
+    private static final int ERROR = -999;
+
     public static boolean validateBST(TreeNode root) {
 
-        if (root == null) {
-            return true;
-        }
-
-        if (root.left() == null && root.right() == null) {
-            return true;
-        }
-
-        if (root.data() >= findMax(root.left()) && root.data() < findMin(root.right())) {
-            return true;
-        } else {
-            return false;
-        }
+        return root == null || root.left() == null && root.right() == null || root.data() >= findMax(root.left()) && root.data() < findMin(root.right());
 
     }
 
     private static int findMax(TreeNode root) {
 
         if (root == null) {
-            return -999;
+            return ERROR;
         } else if (root.left() == null && root.right() == null) {
             return root.data();
         } else if (root.left() != null && root.right() == null) {
@@ -42,7 +32,7 @@ public class BST {
     private static int findMin(TreeNode root) {
 
         if (root == null) {
-            return -999;
+            return ERROR;
         } else if (root.left() == null && root.right() == null) {
             return root.data();
         } else if (root.left() != null && root.right() == null) {

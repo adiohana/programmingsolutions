@@ -7,10 +7,12 @@ public class TreeNode {
 
     private int data;
     private TreeNode[] children;
+    private TreeNode parent;
 
-    public TreeNode(int data) {
+    TreeNode(int data) {
         this.data = data;
         children = new TreeNode[2];
+        parent = null;
     }
 
     public void addLeft(TreeNode leftChild) {
@@ -32,4 +34,13 @@ public class TreeNode {
     public int data() {
         return data;
     }
+
+    public TreeNode parent() {
+        return parent;
+    }
+
+    public void addParent(TreeNode parent) {
+        this.parent = parent;
+    }
+
 }

@@ -8,7 +8,7 @@ public class ListNode {
     Integer data;
     ListNode nextNode;
 
-    public ListNode(Integer data) {
+    ListNode(Integer data) {
         this.data = data;
     }
 

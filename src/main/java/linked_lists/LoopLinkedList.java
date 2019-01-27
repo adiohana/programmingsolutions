@@ -7,11 +7,6 @@ import java.util.LinkedList;
  */
 public class LoopLinkedList {
 
-    /**
-     * given a circular linked list, return the node at the beginning of the loop
-     *
-     * @return
-     */
     public static ListNode loopDetection(LinkedList<ListNode> linkedList) {
 
         ListNode fastRunner = linkedList.getFirst();

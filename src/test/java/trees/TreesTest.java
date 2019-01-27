@@ -51,6 +51,51 @@ public class TreesTest {
         assertEquals(false, BST.validateBST(createBST(false)));
     }
 
+    @Test
+    public void testSuccessor1() {
+
+        TreeNode bstRoot = createBST(true);
+        TreeNode toVerify = bstRoot.left().right();
+        assertEquals(toVerify.data(), Successor.successor(bstRoot.left()).data());
+    }
+
+    @Test
+    public void testSuccessor2() {
+
+        TreeNode bstRoot = createBST(true);
+        assertEquals(bstRoot.data(), Successor.successor(bstRoot.left().right()).data());
+    }
+
+    @Test
+    public void testSuccessor3() {
+
+        TreeNode bstRoot = createBST(true);
+        TreeNode toVerify = bstRoot.left();
+        assertEquals(toVerify.data(), Successor.successor(bstRoot.left().left()).data());
+    }
+
+    @Test
+    public void testSuccessor4() {
+
+        TreeNode bstRoot = createBST(true);
+        TreeNode toVerify = bstRoot.right().right();
+        assertEquals(toVerify.data(), Successor.successor(bstRoot.right()).data());
+    }
+
+    @Test
+    public void testSuccessor5() {
+
+        TreeNode bstRoot = createBST(true);
+        assertEquals(null, Successor.successor(bstRoot.right().right()));
+    }
+
+    @Test
+    public void testSuccessor6() {
+
+        TreeNode bstRoot = createBST(true);
+        assertEquals(null, Successor.successor(bstRoot));
+    }
+
     private TreeNode createRootOnlyTree() {
         return new TreeNode(20);
     }
@@ -138,6 +183,13 @@ public class TreesTest {
         leftChild.addLeft(leftLeftChild);
         leftChild.addRight(leftRightChild);
         rightChild.addRight(rightRightChild);
+
+        //add parents
+        leftChild.addParent(root);
+        rightChild.addParent(root);
+        leftLeftChild.addParent(leftChild);
+        leftRightChild.addParent(leftChild);
+        rightRightChild.addParent(rightChild);
 
         return root;
 

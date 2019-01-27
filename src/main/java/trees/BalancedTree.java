@@ -7,15 +7,7 @@ public class BalancedTree {
 
     public static boolean checkBalanced(TreeNode root) {
 
-        if(root == null) {
-            return true;
-        }
-
-        if(Math.abs(height(root.left()) - height(root.right())) <= 1) {
-            return true;
-        } else {
-            return false;
-        }
+        return root == null || Math.abs(height(root.left()) - height(root.right())) <= 1;
 
     }
 

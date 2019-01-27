@@ -45,9 +45,7 @@ public class LinkedListsTest {
     @Test
     public void testPalindromeListNull() {
 
-        boolean isPalindrome = PalindromeLinkedList.checkIfPalindrome(null);
-
-        assertEquals(false, isPalindrome);
+        assertEquals(false, PalindromeLinkedList.checkIfPalindrome(null));
     }
 
     @Test
@@ -61,7 +59,7 @@ public class LinkedListsTest {
     @Test
     public void testPalindromeListSingleValue() {
 
-        LinkedList<ListNode> singleValueLinkedList = new LinkedList<ListNode>();
+        LinkedList<ListNode> singleValueLinkedList = new LinkedList<>();
         singleValueLinkedList.add(new ListNode(99));
         boolean isPalindrome = PalindromeLinkedList.checkIfPalindrome(singleValueLinkedList);
 
@@ -70,7 +68,7 @@ public class LinkedListsTest {
 
     private LinkedList<ListNode> createNotPalindromeList() {
 
-        LinkedList<ListNode> palindromeList = new LinkedList<ListNode>();
+        LinkedList<ListNode> palindromeList = new LinkedList<>();
         ListNode listNode1 = new ListNode(1);
         ListNode listNode2 = new ListNode(2);
         ListNode listNode3 = new ListNode(3);
@@ -96,7 +94,7 @@ public class LinkedListsTest {
 
     private LinkedList<ListNode> createPalindromeList() {
 
-        LinkedList<ListNode> palindromeList = new LinkedList<ListNode>();
+        LinkedList<ListNode> palindromeList = new LinkedList<>();
         ListNode listNode1 = new ListNode(1);
         ListNode listNode2 = new ListNode(2);
         ListNode listNode3 = new ListNode(3);
@@ -122,7 +120,7 @@ public class LinkedListsTest {
 
     private LinkedList<ListNode> createCircularLinkedList() {
 
-        LinkedList<ListNode> circularLinkedList = new LinkedList<ListNode>();
+        LinkedList<ListNode> circularLinkedList = new LinkedList<>();
         ListNode listNode1 = new ListNode(1);
         ListNode listNode2 = new ListNode(2);
         ListNode listNode3 = new ListNode(7);

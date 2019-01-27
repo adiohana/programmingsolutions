@@ -14,7 +14,7 @@ public class PalindromeLinkedList {
             return false;
         }
 
-        Stack<Integer> stack = new Stack<Integer>();
+        Stack<Integer> stack = new Stack<>();
 
         ListNode runner = linkedList.getFirst();
         int listSize = linkedList.size();
