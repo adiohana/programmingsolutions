@@ -42,5 +42,4 @@ public class TreeNode {
     public void addParent(TreeNode parent) {
         this.parent = parent;
     }
-
 }
